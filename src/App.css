@@ -1,5 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .App-style {
-  background-color: #2b2d42;
+  background-color: #10002b;
+  color: white;
+}
+
+.App-subtitle {
+  background-color: #10002b;
+  color: white;
+  padding-left: 10px;
 }
 
 .App-Header-text {

@@ -15,7 +15,11 @@ let ex = esercizio[0];
 
 return (
         <div>
-            <h2>Pagina di dettaglio dell'esercizio: {ex.exerciseName} </h2>
+            <h1>Pagina di dettaglio dell'esercizio:</h1>
+            <div>
+                <h2>{ex.exerciseName} </h2>
+                <img src={ex.exerciseImage} />
+            </div>
         </div>
     )
 }
