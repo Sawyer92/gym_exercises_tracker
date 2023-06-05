@@ -14,13 +14,21 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export default function MainContent () {
 
   const navigate = useNavigate();
-  const urlAPI = 'http://localhost:8080/api';
+  const urlAPI = 'http://44.201.89.47:8080/api';
 
   function navigatePage(idTypePassed,idPassed){
       console.log('Vado alla pagina: esercizi/',idTypePassed +'_'+ idPassed);
         navigate(`/esercizi/${idTypePassed}_${idPassed}`, 
         {exerciseType: idTypePassed,exerciseId: idPassed});        
   }
+
+
+  function vaiToModificaAllenamentoPage(idPassed){
+    console.log('Vado alla pagina: allenamento/', idPassed);
+      navigate(`/allenamento/${idPassed}`, 
+      {allenamentoId: idPassed});        
+  }
+  
   
   const [arrayAllenamenti, setArrayAllenamenti] = useState([]);
   const [userLogged , setUserLogged] = useState(false);
@@ -114,7 +122,6 @@ export default function MainContent () {
 
   }
 
-
   const displayAllenamentiTorvati =()=>{
    return arrayAllenamenti.map((allenamento, index) =>{
       return ( <div>
@@ -130,7 +137,7 @@ export default function MainContent () {
           </div>
           <div className='flex'>
           <div className='border-2 border-white rounded-full m-4 h-14 w-14 items-center flex hover:bg-slate-400'>
-            <Icon style={{width:'70px', height: '70px', paddingTop: '12px', paddingRight: '15px'}}>
+            <Icon style={{width:'70px', height: '70px', paddingTop: '12px', paddingRight: '15px'}} onClick={()=>{vaiToModificaAllenamentoPage(allenamento.idAllenamento)}}>
               <EditIcon/>
             </Icon>
           </div>
