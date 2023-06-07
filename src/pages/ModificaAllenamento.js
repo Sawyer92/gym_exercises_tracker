@@ -12,7 +12,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function ModificaAllenamento (props) {
 
-const urlAPI = 'http://http://44.201.89.47:8080/api/';  
+const urlAPI = 'https://44.201.89.47:8080/api/';  
 const navigate = useNavigate();
 
 
