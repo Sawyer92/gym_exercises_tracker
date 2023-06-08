@@ -5,7 +5,7 @@ import lista from './../assets/images/training_list.png';
 
 export default function CreateNewAllenamento () {
 
-  const urlAPI = 'http://172.31.82.246:8080/api';  
+  const urlAPI = 'https://172.31.82.246:8080/api';  
   
   const [arrayResult, setArrayResult] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
