@@ -2,10 +2,12 @@ import React, {useState, useEffect}from "react";
 import ExerciseTile from "../components/ExerciseTile";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import lista from './../assets/images/training_list.png';
+import * as costants from '../utils/Constants';
 
 export default function CreateNewAllenamento () {
 
-  const urlAPI = 'https://172.31.82.246:8080/api';  
+ 
+  const urlAPI = costants.URL_BE;
   
   const [arrayResult, setArrayResult] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

@@ -9,12 +9,13 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LoadingSpinner from './LoadingSpinner';
 import EditIcon from '@mui/icons-material/ModeEdit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import * as costants from '../utils/Constants';
 
 export default function MainContent () {
 
   const navigate = useNavigate();
-  const urlAPI = 'https://172.31.82.246:8080/api';
+  
+  const urlAPI = costants.URL_BE;
 
   function navigatePage(idTypePassed,idPassed){
       console.log('Vado alla pagina: esercizi/',idTypePassed +'_'+ idPassed);

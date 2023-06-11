@@ -9,10 +9,11 @@ import ExerciseTile from '../components/ExerciseTile';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import EditIcon from '@mui/icons-material/ModeEdit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import * as costants from '../utils/Constants';
 
 export default function ModificaAllenamento (props) {
 
-const urlAPI = 'https://172.31.82.246:8080/api/';  
+  const urlAPI = costants.URL_BE;
 const navigate = useNavigate();
 
 
